@@ -37,20 +37,42 @@ __author__ = 'arif_'
 #     print('Just Kidding')
 
 #############################################
-import locale
+# import locale
+#
+# locale.setlocale(locale.LC_ALL, '')  # use the user-default locale
+# shippingCharge = False
+# total = int(input('What is the total amount of purchase?\n'))
+#
+# if total < 50:
+#     shippingCharge = True
+# if shippingCharge == True:
+#     TotalWithShipping = total + 10
+#     print('You have to pay an extra', locale.currency(float(10)), 'for the total\
+#  of', locale.currency(float(TotalWithShipping)), 'because\
+#  you\'re cheap')  # What is locale.currency??
+# else:
+#     print('You have to pay', locale.currency(float(total)))
+# print('Have a nice day.')
+###########################################
 
-locale.setlocale(locale.LC_ALL, '')  # use the user-default locale
-shippingCharge = False
-total = int(input('What is the total amount of purchase?\n'))
+# Team = input('Enter your favourite team: ').upper()
+# Sport = input('Enter your favourite sport: ').upper()
 
-if total < 50:
-    shippingCharge = True
-if shippingCharge == True:
-    TotalWithShipping = total + 10
-    print('You have to pay an extra', locale.currency(float(10)), 'for the total\
- of', locale.currency(float(TotalWithShipping)), 'because\
- you\'re cheap')  # What is locale.currency??
-else:
-    print('You have to pay', locale.currency(float(total)))
-print('Have a nice day.')
+##################
+# if Sport == 'FOOTBALL':
+#     print('Go Football!!')
+#     if Team == 'MU':
+#         print('Manchester United gonna win this year')
+#     print('We love football')
+# else:
+#     print('Go and learn about football')
+###################
+
+# if Sport == 'FOOTBALL' and Team == 'MU': # make sure both are in capital latter because the previous .upper()
+#     print('Go Red Devils!')
+# # Make sure there are brackets. Same is as in math
+# elif Sport == 'FOOTBALL' and (Team == 'LIVERPOOL' or Team == 'ARSENAL'):
+#     print('you suck')
+# else:
+#     print('You\'re stupid')
 ###########################################
