@@ -123,13 +123,40 @@ __author__ = 'arif_'
 #         turtle.forward(50)
 #         turtle.right(360/nbrSides)
 ###########################################
-import turtle
-
-nbrSides = int(input('Number of sides.\n'))
-for colour in range(nbrSides):
-    turtle.forward(100)
-    turtle.right(360 / nbrSides)
-    for colour in range(1):
-        turtle.forward(50)
-        turtle.right(360 / nbrSides)
+# import turtle
+#
+# nbrSides = int(input('Number of sides.\n'))
+# for colour in range(nbrSides):
+#     turtle.forward(100)
+#     turtle.right(360 / nbrSides)
+#     for colour in range(1):
+#         turtle.forward(50)
+#         turtle.right(360 / nbrSides)
 ###########################################
+# Looping through unknown number of time.
+# answer = '0'
+# while answer != '4':
+#     answer = input('What is 2 + 2\n')
+# print( ' Yes! 2 + 2 = 4')
+###########################################
+# import turtle
+# counter = 0
+# while counter < 12:
+#     turtle.forward(100)
+#     turtle.right(90)
+# #   counter = counter + 1
+#     counter += 1
+###########################################
+# import turtle
+# penColor = input('What color do you want?\n')
+# lineLength = int(input('How long do you want the line to be?\n'))
+# lineAngle = int(input('What is the angle of the line?\n'))
+# while lineLength == 1:
+#     lineLength = int(input('How long do you want the line to be?\n'))
+#     if lineLength > 0:
+#         turtle.color(penColor)
+#         turtle.right(lineAngle)
+#         turtle.forward(lineLength)
+#     elif lineLength <= 0:
+#         exit()
+# exit()
