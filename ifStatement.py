@@ -42,14 +42,13 @@ __author__ = 'arif_'
 # locale.setlocale(locale.LC_ALL, '')  # use the user-default locale
 # shippingCharge = False
 # total = int(input('What is the total amount of purchase?\n'))
-#
+# TotalWithShipping = total + 10
 # if total < 50:
 #     shippingCharge = True
-# if shippingCharge == True:
-#     TotalWithShipping = total + 10
-#     print('You have to pay an extra', locale.currency(float(10)), 'for the total\
-#  of', locale.currency(float(TotalWithShipping)), 'because\
-#  you\'re cheap')  # What is locale.currency??
+# else:
+#     shippingCharge = False
+# if shippingCharge:
+#     print('You have to pay an extra', locale.currency(float(10)), 'for the total of', locale.currency(float(TotalWithShipping)), 'because you\'re cheap')  # What is locale.currency??
 # else:
 #     print('You have to pay', locale.currency(float(total)))
 # print('Have a nice day.')
