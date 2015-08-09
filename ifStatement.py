@@ -76,3 +76,61 @@ __author__ = 'arif_'
 # else:
 #     print('You\'re stupid')
 ###########################################
+# Calculate the total to charge from an online store in Malaysia
+# ASk The user what country they are from and their order total
+# If the user is from Malaysia, ask which state
+# If the order is from outside Malaysia do not charge any taxes
+# If the order was placed in Malaysia, calculate tax based on which state.
+# - Selangor charge 5% GST
+# - Penang, Kelantan, Perak charge 13% Harmonized Sales Tax
+# - All other state charge 6% state tax and additional 5% GST
+
+# GoodsSalesTax = 0.05
+# HarmonizedTax = 0.13
+# StateTax = 0.06
+# Malaysian = False
+#
+# Nationality = str(input('Are you from Malaysia? (y/n)\n')).lower()
+# if Nationality == 'y':
+#     Malaysian = True
+# elif Nationality == 'n':
+#     Malaysian = False
+# else:
+#     print('please restart the runtime and choose the correct answer')
+#     exit()
+# State = str(input('What is your state\'s name?\n')).lower()
+#
+# InputAmount = float(input('What is the base amount?\n'))
+# if State == 'selangor' and Malaysian:
+#     Amount = InputAmount + (InputAmount * GoodsSalesTax)
+#     print('\nThe amount after tax is', Amount)
+# elif State == ('penang' or 'kelantan' or 'perak') and Malaysian:
+#     Amount = InputAmount + (InputAmount * HarmonizedTax)
+#     print('\nThe amount after tax is', Amount)
+# elif Malaysian == True:
+#     Amount = InputAmount + ((InputAmount * GoodsSalesTax) + (InputAmount * StateTax))
+#     print('\nThe amount after tax is', Amount)
+# else:
+#     Amount = InputAmount
+#     print('\nYour amount is', Amount)
+# exit()
+###########################################
+# import turtle
+# nbrSides = 20
+# for steps in range(nbrSides):
+#     turtle.forward(100)
+#     turtle.right(360/nbrSides)
+#     for moresteps in range(nbrSides):
+#         turtle.forward(50)
+#         turtle.right(360/nbrSides)
+###########################################
+import turtle
+
+nbrSides = int(input('Number of sides.\n'))
+for colour in range(nbrSides):
+    turtle.forward(100)
+    turtle.right(360 / nbrSides)
+    for colour in range(1):
+        turtle.forward(50)
+        turtle.right(360 / nbrSides)
+###########################################
