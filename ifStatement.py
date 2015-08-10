@@ -75,6 +75,31 @@ __author__ = 'arif_'
 # else:
 #     print('You\'re stupid')
 ###########################################
+# def main():
+#     happyBirthdayCall1()
+#     print('')
+#     happyBirthdayCall2()
+#     return
+#
+# def happyBirthdayCall1():
+#     print('Happy Birthday to you!')
+#     print('Happy Birthday to you!')
+#     print('Happy Birthday, dear', name1, '.')
+#     print('Happy Birthday to you')
+#     return
+#
+# def happyBirthdayCall2():
+#     print("Happy Birthday to you!")
+#     print("Happy Birthday to you!")
+#     print("Happy Birthday, dear", name2, '.')
+#     print("Happy Birthday to you!")
+#     return
+#
+# name1 = str(input('What is your first friend\'s name?\n'))
+# name2 = str(input('What is your second friend\'s name?\n'))
+#
+# main()
+###########################################
 # Calculate the total to charge from an online store in Malaysia
 # ASk The user what country they are from and their order total
 # If the user is from Malaysia, ask which state
