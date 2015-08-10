@@ -176,6 +176,8 @@ from tkinter import *
 
 root = Tk()
 
-photo =
+photo = PhotoImage( file="add1.png" )
+label = Label( root, image=photo )
+label.pack( )
 
 root.mainloop()
