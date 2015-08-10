@@ -100,39 +100,82 @@ from tkinter import *
 
 ##############Creating drop down menu
 
-def doNothing():
-    print('ok ok I won\'t')
+# def doNothing():
+#     print('ok ok I won\'t')
+#
+#
+# root = Tk()  # Create a blank window
+#
+# menu = Menu(root)
+# root.config(menu=menu)
+#
+# subMenu = Menu(menu)  # This is adding the item
+# menu.add_cascade(label='File', menu=subMenu)  # This is how I want it to behave
+# subMenu.add_command(label='New Project...', command=doNothing)
+# subMenu.add_command(label='New...', command=doNothing)
+# subMenu.add_separator()
+# subMenu.add_command(label='Exit', command=quit)
+#
+# editMenu = Menu(menu)
+# menu.add_cascade(label='Edit', menu=editMenu)
+# editMenu.add_command(label='Redo', command=doNothing)
+#
+# # ENd of menu, Starts of toolbar
+#
+# toolbar = Frame(root, bg='blue')  # create basic toolbar
+# insertButton = Button(toolbar, text='Insert Image', command=doNothing)  # put the button in toolbar
+# insertButton.pack(side=LEFT, padx=2, pady=2)
+# printButton = Button(toolbar, text='print', command=doNothing())
+# printButton.pack(side=LEFT, padx=2, pady=2)
+#
+# toolbar.pack(side=TOP, fill=X)
+#
+# # ENd of toolbar, starts of status bar
+#
+# status = Label(root, text='Preparing to do nothing...', bd=1, relief=SUNKEN, anchor=W, bg='white')
+# status.pack(side=BOTTOM, fill=X)
+#
+# root.mainloop()  # To make the window stay
 
+##############Message Box
 
-root = Tk()  # Create a blank window
+# import tkinter.messagebox
+#
+# root = Tk()
+#
+# tkinter.messagebox.showinfo('Window Title', 'Mondkey can live up to three hundred years')
+# answer = tkinter.messagebox.askquestion('Question 1', 'Do you like silly faces?')
+#
+# if answer == 'yes':
+#     print(' ;-) ')
+# elif answer == 'no':
+#     quit()
+# else:
+#     quit()
+#
+# root.mainloop()
 
-menu = Menu(root)
-root.config(menu=menu)
+##############Shapes and Graphics
 
-subMenu = Menu(menu)  # This is adding the item
-menu.add_cascade(label='File', menu=subMenu)  # This is how I want it to behave
-subMenu.add_command(label='New Project...', command=doNothing)
-subMenu.add_command(label='New...', command=doNothing)
-subMenu.add_separator()
-subMenu.add_command(label='Exit', command=quit)
+# root = Tk()
+#
+# canvas = Canvas(root, width=600, height=300)
+# canvas.pack()
+#
+# blackLine = canvas.create_line(10,10,300,200, fill='black')
+# redLine = canvas.create_line(10,290,300,200, fill='red')
+# blueLine = canvas.create_line(590,10,300,200, fill='blue')
+# greenBox = canvas.create_rectangle(60,30,400,180, fill='green')
+#
+# canvas.delete(greenBox, redLine, blueLine)
+# canvas.delete(ALL)
+#
+# root.mainloop()
 
-editMenu = Menu(menu)
-menu.add_cascade(label='Edit', menu=editMenu)
-editMenu.add_command(label='Redo', command=doNothing)
+############ Images and Icons
 
-# ENd of menu, Starts of toolbar
+root = Tk()
 
-toolbar = Frame(root, bg='blue')  # create basic toolbar
-insertButton = Button(toolbar, text='Insert Image', command=doNothing)  # put the button in toolbar
-insertButton.pack(side=LEFT, padx=2, pady=2)
-printButton = Button(toolbar, text='print', command=doNothing())
-printButton.pack(side=LEFT, padx=2, pady=2)
+photo =
 
-toolbar.pack(side=TOP, fill=X)
-
-# ENd of toolbar, starts of status bar
-
-
-root.mainloop()  # To make the window stay
-
-##############
+root.mainloop()
