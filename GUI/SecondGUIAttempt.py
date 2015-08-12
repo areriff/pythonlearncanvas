@@ -1,5 +1,4 @@
 __author__ = 'arif_'
-from tkinter import *
 
 ##########Frame
 # root = Tk()  # Create a blank window
@@ -172,12 +171,12 @@ from tkinter import *
 #
 # root.mainloop()
 
-############ Images and Icons
+############ Images and Icons (Not working yet, need png
 
-root = Tk()
-
-photo = PhotoImage( file="add1.png" )
-label = Label( root, image=photo )
-label.pack( )
-
-root.mainloop()
+# root = Tk()
+#
+# photo = PhotoImage( file="add1.png" )
+# label = Label( root, image=photo )
+# label.pack( )
+#
+# root.mainloop()
