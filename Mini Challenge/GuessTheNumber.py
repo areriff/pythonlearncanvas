@@ -16,3 +16,34 @@
 #     Print
 #     While loops
 #     If/Else statements
+
+import random
+
+mainValue = int( random.randrange( 10, 100, 1 ) )
+# print(mainValue) # To check the randomly generated value
+userGuess = 1
+guessAnswer = False
+
+if userGuess and mainValue:
+    guessAnswer = True
+
+while guessAnswer is True:
+    userGuess = input( 'Guess number from 10 to 99\n' )
+    if int( userGuess ) == mainValue:
+        guessAnswer = True
+        print( 'Congratulation! You\'re correct.' )
+        print( 'Thank you for trying this game.' )
+        break
+
+    elif int( userGuess ) < mainValue:
+        print( 'Your guessed number is lower than actual number, try again.' )
+
+    elif int( userGuess ) > mainValue:
+        print( 'Your guessed number is higher than actual number, try again' )
+
+    else:
+        print( 'You have entered an invalid value, try again' )
+        raise ValueError
+
+print( 'The correct answer is ', mainValue )  # To verified the randomly generated value
+print( 'Exiting...' )
