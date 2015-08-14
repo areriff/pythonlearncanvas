@@ -22,3 +22,131 @@
 # you want to build this into a vast, complex word, the coding will get substantially harder, especially if
 # you want your user to start interacting with actual objects within the game. That complexity could be
 # great, if you’d like to make this into a long-term project. *Hint hint.
+
+
+def choseSE( ):
+    print( 'You have choose the Southeast door\n' )
+    return
+
+
+def choseSW( ):
+    print( 'You have choose the Southwest door\n' )
+    return
+
+
+def start( ):
+    print( 'Welcome to the Mansion of the dead.\n' )
+    print( 'You\'re in Level 1 Room 1. There are two doors, pick one.' )
+    decision = str( input( "Door labeled 'SE' or door labeled 'SW'\n" ) )
+    if decision == 'SE':
+        choseSE( )
+        lvl2room1( )
+    elif decision == 'SW':
+        choseSW( )
+        lvl2room2( )
+    else:
+        print( 'You died.' )
+        quit( )
+    return
+
+
+def lvl2room1( ):
+    print( '\nYou\'re in Level 2 Room 1. There are two doors, pick one.' )
+    decision = str( input( "Door labeled 'SE' or door labeled 'SW'\n" ) )
+    if decision == 'SE':
+        choseSE( )
+        lvl3room1( )
+    elif decision == 'SW':
+        choseSW( )
+        lvl3room2( )
+    else:
+        print( 'You died.' )
+        quit( )
+    return
+
+
+def lvl2room2( ):
+    print( '\nYou\'re in Level 2 Room 2. There are two doors, pick one.' )
+    decision = str( input( "Door labeled 'SE' or door labeled 'SW'\n" ) )
+    if decision == 'SE':
+        choseSE( )
+        lvl3room3( )
+    elif decision == 'SW':
+        choseSW( )
+        lvl3room4( )
+    else:
+        print( 'You died.' )
+        quit( )
+    return
+
+
+def lvl3room1( ):
+    print( '\nYou\'re in Level 3 Room 1. There are two doors, pick one.' )
+    decision = str( input( "Door labeled 'SE' or door labeled 'SW'\n" ) )
+    if decision == 'SE':
+        choseSE( )
+        print( 'The door collapsed on you!' )
+        print( 'You died.' )
+    elif decision == 'SW':
+        choseSW( )
+        print( 'The door collapsed on you!' )
+        print( 'You died.' )
+    else:
+        print( 'You died.' )
+        quit( )
+    return
+
+
+def lvl3room2( ):
+    print( '\nYou\'re in Level 3 Room 2. There are two doors, pick one.' )
+    decision = str( input( "Door labeled 'SE' or door labeled 'SW'\n" ) )
+    if decision == 'SE':
+        choseSE( )
+        print( 'The door collapsed on you!' )
+        print( 'You died.' )
+    elif decision == 'SW':
+        choseSW( )
+        print( 'The door collapsed on you!' )
+        print( 'You died.' )
+    else:
+        print( 'You died.' )
+        quit( )
+    return
+
+
+def lvl3room3( ):
+    print( '\nYou\'re in Level 3 Room 3. There are two doors, pick one.' )
+    decision = str( input( "Door labeled 'SE' or door labeled 'SW'\n" ) )
+    if decision == 'SE':
+        choseSE( )
+        print( 'The door collapsed on you!' )
+        print( 'You died.' )
+    elif decision == 'SW':
+        choseSW( )
+        print( 'The door collapsed on you!' )
+        print( 'You died.' )
+    else:
+        print( 'You died.' )
+        quit( )
+    return
+
+
+def lvl3room4( ):
+    print( '\nYou\'re in Level 3 Room 4. There are two doors, pick one.' )
+    decision = str( input( "Door labeled 'SE' or door labeled 'SW'\n" ) )
+    if decision == 'SE':
+        choseSE( )
+        print( 'You found the treasure!!!' )
+    elif decision == 'SW':
+        choseSW( )
+        print( 'The door collapsed on you!' )
+        print( 'You died.' )
+    else:
+        print( 'You died.' )
+        quit( )
+    return
+
+
+start( )
+
+print( 'Thank You :-)' )
