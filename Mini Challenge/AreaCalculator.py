@@ -10,7 +10,14 @@
 # If/Elif/Else
 
 import math
+import os
 
+
+def cls( ):
+    loop = 1
+    while loop < 100:
+        print( " \n" )
+        loop += 1
 
 def rectangleArea( ):
     h = int( input( 'Enter the height: ' ) )
@@ -81,27 +88,40 @@ def main( ):
     print( '7. Circle' )
     print( '8. Sector' )
     print( '9. QUIT' )
+    userSelection = int( input( 'Choose which shape you want calculate the area of: ' ) )
     quitAction = False
-    while quitAction is True:
-        userSelection = str( input( 'Choose which shape you want calculate the area of: ' ) )
-        if userSelection is '1':
+    clear = lambda: os.system( 'cls' )
+    while quitAction is False:
+        if userSelection == 1:
             rectangleArea( )
-        elif userSelection is '2':
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            if retry == 'y':
+                cls( )
+                continue
+            elif retry == 'n':
+                quitAction = True
+            else:
+                main( )
+        elif userSelection == 2:
             triangleArea( )
-        elif userSelection is '3':
+        elif userSelection == 3:
             trapeziumArea( )
-        elif userSelection is '4':
+        elif userSelection == 4:
             ellipseArea( )
-        elif userSelection is '5':
+        elif userSelection == 5:
             squareArea( )
-        elif userSelection is '6':
+        elif userSelection == 6:
             parallelogramArea( )
-        elif userSelection is '7':
+        elif userSelection == 7:
             circleArea( )
-        elif userSelection is '8':
+        elif userSelection == 8:
             sectorArea( )
-        elif userSelection is '9':
+        elif userSelection == 9:
             quitAction = True
         else:
             print( 'Invalid selection' )
     print( 'Thank you for using this software.' )
+
+
+main( )
