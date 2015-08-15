@@ -226,19 +226,19 @@ def main( ):
     print( 'The word contains', len( word ), 'letters.' )
     while not correctlyGuess:
         text = 'Please enter one letter or a {}-letter word. '.format( len( word ) )
-        userGuestInput = input( text )
-        userGuestInput = userGuestInput.upper( )
-        if userGuestInput in guesses:
-            print( 'You already correctlyGuess "' + userGuestInput + '"' )
-        elif len( userGuestInput ) == len( word ):
-            guesses.append( userGuestInput )
-            if userGuestInput == word:
+        userGuessInput = input( text )
+        userGuessInput = userGuessInput.upper( )
+        if userGuessInput in guesses:
+            print( 'You already correctlyGuess "' + userGuessInput + '"' )
+        elif len( userGuessInput ) == len( word ):
+            guesses.append( userGuessInput )
+            if userGuessInput == word:
                 correctlyGuess = True
             else:
                 print( 'Sorry, that is incorrect. ' )
-        elif len( userGuestInput ) == 1:
-            guesses.append( userGuestInput )
-            result = check( word, guesses, userGuestInput )
+        elif len( userGuessInput ) == 1:
+            guesses.append( userGuessInput )
+            result = check( word, guesses, userGuessInput )
             if result == word:
                 correctlyGuess = True
             else:
