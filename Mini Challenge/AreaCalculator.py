@@ -10,7 +10,6 @@
 # If/Elif/Else
 
 import math
-import os
 
 
 def cls( ):
@@ -78,50 +77,134 @@ def sectorArea( ):
 
 
 def main( ):
-    print( 'This is the available area to choose from:' )
-    print( '1. Rectangle' )
-    print( '2. Triangle' )
-    print( '3. Trapezium' )
-    print( '4. Ellipse' )
-    print( '5. Square' )
-    print( '6. Parallelogram' )
-    print( '7. Circle' )
-    print( '8. Sector' )
-    print( '9. QUIT' )
-    userSelection = int( input( 'Choose which shape you want calculate the area of: ' ) )
-    quitAction = False
-    clear = lambda: os.system( 'cls' )
-    while quitAction is False:
+    quitAction = True
+
+    while quitAction == True:
+        print( 'This is the available area to choose from:' )
+        print( '1. Rectangle' )
+        print( '2. Triangle' )
+        print( '3. Trapezium' )
+        print( '4. Ellipse' )
+        print( '5. Square' )
+        print( '6. Parallelogram' )
+        print( '7. Circle' )
+        print( '8. Sector' )
+        print( '9. QUIT' )
+
+        userSelection = int( input( 'Choose which shape you want calculate the area of: ' ) )
+
         if userSelection == 1:
             rectangleArea( )
             retry = str( input( 'Do you want to try again? y/n: ' ) )
             retry = retry.upper( )
-            if retry == 'y':
+            print( retry )
+            if retry == 'Y':
                 cls( )
                 continue
-            elif retry == 'n':
-                quitAction = True
+            elif retry == 'N':
+                quitAction = False
             else:
                 main( )
+
         elif userSelection == 2:
             triangleArea( )
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            print( retry )
+            if retry == 'Y':
+                cls( )
+                continue
+            elif retry == 'N':
+                quitAction = False
+            else:
+                main( )
+
         elif userSelection == 3:
             trapeziumArea( )
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            print( retry )
+            if retry == 'Y':
+                cls( )
+                continue
+            elif retry == 'N':
+                quitAction = False
+            else:
+                main( )
+
         elif userSelection == 4:
             ellipseArea( )
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            print( retry )
+            if retry == 'Y':
+                cls( )
+                continue
+            elif retry == 'N':
+                quitAction = False
+            else:
+                main( )
+
         elif userSelection == 5:
             squareArea( )
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            print( retry )
+            if retry == 'Y':
+                cls( )
+                continue
+            elif retry == 'N':
+                quitAction = False
+            else:
+                main( )
+
         elif userSelection == 6:
             parallelogramArea( )
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            print( retry )
+            if retry == 'Y':
+                cls( )
+                continue
+            elif retry == 'N':
+                quitAction = False
+            else:
+                main( )
+
         elif userSelection == 7:
             circleArea( )
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            print( retry )
+            if retry == 'Y':
+                cls( )
+                continue
+            elif retry == 'N':
+                quitAction = False
+            else:
+                main( )
+
         elif userSelection == 8:
             sectorArea( )
+            retry = str( input( 'Do you want to try again? y/n: ' ) )
+            retry = retry.upper( )
+            print( retry )
+            if retry == 'Y':
+                cls( )
+                continue
+            elif retry == 'N':
+                quitAction = False
+            else:
+                main( )
+
         elif userSelection == 9:
-            quitAction = True
+            quitAction = False
+
         else:
             print( 'Invalid selection' )
-    print( 'Thank you for using this software.' )
+    return
+
 
 
 main( )
+print( 'Thank you for using this software.' )
