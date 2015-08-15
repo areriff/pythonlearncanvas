@@ -194,7 +194,8 @@ def get_word( ):
 
 
 def check( word, guesses, guess ):
-    guess = guess.upper( )
+    upper = guess.upper( )
+    guess = upper
     status = ''
     i = 0
     matches = 0
