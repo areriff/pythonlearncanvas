@@ -222,25 +222,25 @@ def main( ):
     word = get_word( )
     # print(word)
     guesses = [ ]
-    guessed = False
+    correctlyGuess = False
     print( 'The word contains', len( word ), 'letters.' )
-    while not guessed:
+    while not correctlyGuess:
         text = 'Please enter one letter or a {}-letter word. '.format( len( word ) )
         guess = input( text )
         guess = guess.upper( )
         if guess in guesses:
-            print( 'You already guessed "' + guess + '"' )
+            print( 'You already correctlyGuess "' + guess + '"' )
         elif len( guess ) == len( word ):
             guesses.append( guess )
             if guess == word:
-                guessed = True
+                correctlyGuess = True
             else:
                 print( 'Sorry, that is incorrect. ' )
         elif len( guess ) == 1:
             guesses.append( guess )
             result = check( word, guesses, guess )
             if result == word:
-                guessed = True
+                correctlyGuess = True
             else:
                 print( result )
         else:
