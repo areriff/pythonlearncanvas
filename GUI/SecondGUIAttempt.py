@@ -180,3 +180,13 @@ __author__ = 'arif_'
 # label.pack( )
 #
 # root.mainloop()
+
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+
+import sys
+
+class HelloWorld():
+    def __init__(self):
+        QDialog.__init__(self)
+        layout = QV
