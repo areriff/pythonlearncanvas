@@ -193,59 +193,59 @@ def get_word( ):
     return random.choice( words ).upper( )
 
 
-def check( word, guesses, guess ):
-    upper = guess.upper( )
-    guess = upper
+def check( answer, guessesSoFar, userGuessInput ):
+    upper = userGuessInput.upper( )
+    userGuessInput = upper
     status = ''
     i = 0
     matches = 0
-    for letter in word:
-        if letter in guesses:
+    for letter in answer:
+        if letter in guessesSoFar:
             status += letter
         else:
             status += '*'
 
-        if letter == guess:
+        if letter == userGuessInput:
             matches += 1
 
     if matches > 1:
-        print( 'Yes! The word contains', matches, '"' + guess + '"' + 's' )
+        print( 'Yes! The word contains', matches, '"' + userGuessInput + '"' + 's' )
     elif matches == 1:
-        print( 'Yes! The word contains the letter "' + guess + '"' )
+        print( 'Yes! The word contains the letter "' + userGuessInput + '"' )
     else:
-        print( 'Sorry. The word does not contain the letter "' + guess + '"' )
+        print( 'Sorry. The word does not contain the letter "' + userGuessInput + '"' )
 
     return status
 
 
 def main( ):
-    word = get_word( )
+    answer = get_word( )
     # print(word)
     guessesSoFar = [ ]
     correctlyGuess = False
-    print( 'The word contains', len( word ), 'letters.' )
+    print( 'The word contains', len( answer ), 'letters.' )
     while not correctlyGuess:
-        text = 'Please enter one letter or a {}-letter word. '.format( len( word ) )
+        text = 'Please enter one letter or a {}-letter word: '.format( len( answer ) )
         userGuessInput = input( text )
         userGuessInput = userGuessInput.upper( )
         if userGuessInput in guessesSoFar:
             print( 'You already correctlyGuess "' + userGuessInput + '"' )
-        elif len( userGuessInput ) == len( word ):
+        elif len( userGuessInput ) == len( answer ):
             guessesSoFar.append( userGuessInput )
-            if userGuessInput == word:
+            if userGuessInput == answer:
                 correctlyGuess = True
             else:
                 print( 'Sorry, that is incorrect. ' )
         elif len( userGuessInput ) == 1:
             guessesSoFar.append( userGuessInput )
-            result = check( word, guessesSoFar, userGuessInput )
-            if result == word:
+            result = check( answer, guessesSoFar, userGuessInput )
+            if result == answer:
                 correctlyGuess = True
             else:
                 print( result )
         else:
             print( 'Invalid entry.' )
-    print( 'Yes, the word is', word + '! You got it in', len( guessesSoFar ), 'tries.' )
+    print( 'Yes, the word is', answer + '! You got it in', len( guessesSoFar ), 'tries.' )
 
 
 main( )
