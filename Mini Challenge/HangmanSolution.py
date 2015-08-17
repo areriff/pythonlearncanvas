@@ -221,31 +221,31 @@ def check( word, guesses, guess ):
 def main( ):
     word = get_word( )
     # print(word)
-    guesses = [ ]
+    guessesSoFar = [ ]
     correctlyGuess = False
     print( 'The word contains', len( word ), 'letters.' )
     while not correctlyGuess:
         text = 'Please enter one letter or a {}-letter word. '.format( len( word ) )
         userGuessInput = input( text )
         userGuessInput = userGuessInput.upper( )
-        if userGuessInput in guesses:
+        if userGuessInput in guessesSoFar:
             print( 'You already correctlyGuess "' + userGuessInput + '"' )
         elif len( userGuessInput ) == len( word ):
-            guesses.append( userGuessInput )
+            guessesSoFar.append( userGuessInput )
             if userGuessInput == word:
                 correctlyGuess = True
             else:
                 print( 'Sorry, that is incorrect. ' )
         elif len( userGuessInput ) == 1:
-            guesses.append( userGuessInput )
-            result = check( word, guesses, userGuessInput )
+            guessesSoFar.append( userGuessInput )
+            result = check( word, guessesSoFar, userGuessInput )
             if result == word:
                 correctlyGuess = True
             else:
                 print( result )
         else:
             print( 'Invalid entry.' )
-    print( 'Yes, the word is', word + '! You got it in', len( guesses ), 'tries.' )
+    print( 'Yes, the word is', word + '! You got it in', len( guessesSoFar ), 'tries.' )
 
 
 main( )
