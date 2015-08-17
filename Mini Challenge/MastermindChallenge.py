@@ -19,3 +19,5 @@
 # Well done... That took you [5] attempts!
 #
 # You could improve this game by letting the user choose a difficulty rating, and by saving the high score/name (to a variable or a file).
+import random
+print(random)
